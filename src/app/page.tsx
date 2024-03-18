@@ -1,112 +1,211 @@
+"use client"
+
 import Image from "next/image";
+import Link from "next/link";
+import { motion } from "framer-motion"
+
+const images = [
+  '/scam-club-nft-logo-green.png',
+  '/scam-club-nft-logo-blue.png', 
+  '/scam-club-nft-logo-pink.png', 
+];
+
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
+    <main
+      className="flex min-h-screen flex-col items-center justify-between p-2 md:p-24">
+      
       <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">src/app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+        <section>
+          <div>
+            <motion.h1 
+              className="text-6xl"
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+            >PEPE PIGS</motion.h1>
+            <p>50,000 NFT Collection of Pepe Pigs!</p>
+            <p>Collect them all!</p>
+            <p>Polygon</p>
+            <button>Mint Now</button>
+          </div>  
+        </section>
+
+        <section className="mt-5">
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
           >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
+            <Image className="rounded-xl w-full" src="/scam-club-nft-logo-green.png" alt="Pepe Pig" width={300} height={300} />
+          </motion.div>
+          <div className="flex justify-between mt-3 gap-3">
+            <motion.div 
+              className="w-1/3"
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+            >
+              <Image className="rounded-xl w-full" src="/pepepig1.png" alt="Pepe Pig" width={90} height={90}></Image>
+            </motion.div>
+            <motion.div 
+              className="w-1/3"
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+            >
+              <Image className="rounded-xl w-full" src="/pepepig2.png" alt="Pepe Pig" width={90} height={90}></Image>
+            </motion.div>
+            <motion.div 
+              className="w-1/3"
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+            >
+              <Image className="rounded-xl w-full" src="/pepepig3.png" alt="Pepe Pig" width={90} height={90}></Image>
+            </motion.div>
+          </div>
 
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-full sm:before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full sm:after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px] z-[-1]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
+          <div className="flex justify-between mt-3 gap-3">
+            <motion.div 
+              className="w-1/3"
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}  
+            >
+              <Image className="rounded-xl w-full" src="/pepepig4.png" alt="Pepe Pig" width={90} height={90}></Image>
+            </motion.div>
+            <motion.div 
+              className="w-1/3"
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+            >
+              <Image className="rounded-xl w-full" src="/pepepig5.png" alt="Pepe Pig" width={90} height={90}></Image>
+            </motion.div>
+            <motion.div 
+              className="w-1/3"
+              initial={{ opacity: 0}}
+              whileInView={{ opacity: 1}}
+            >
+              <Image className="rounded-xl w-full" src="/pepepig6.png" alt="Pepe Pig" width={90} height={90}></Image>
+            </motion.div>
+          </div>
+          
+        </section>
 
-      <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
+        <section className="flex flex-col items-center my-3 border-2 border-black rounded-xl py-5">
+          <h1 className=" text-2xl mb-5">Mint Pepe Pigs Here!</h1>
+          <p>Connect your wallet</p>
+          <p>Mint your Pepe Pig with Polygon!</p>
+          <button className="bg-black text-white px-5 py-2 rounded mt-5 text-2xl">Connect</button>
+          <button className="bg-black text-white px-5 py-2 rounded mt-5 text-2xl">Mint</button>
+          <p className="mt-10">Socials</p>
+          <div className="flex gap-4">
+            <Link href="/">Telegram</Link>
+            <Link href="/">X</Link>
+            <Link href="/">Instagram</Link>
+          </div>
+        </section>
 
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
+        <section>
+          <div>
+            <h1 className="ml-3 text-2xl">How to Buy?</h1>
+          </div>
+          <div className="flex w-full gap-2">
+            <div className="w-1/3 border-2 border-black rounded-xl p-2">
+              <p>Step 1</p>
+              <p>Connect a wallet</p>
+              <p>Popular Polyogn wallets</p>
+              <Link href="/">Metamask</Link>
+              <Link href="/">Phantom</Link>
+            </div>
+            <div className="w-1/3 border-2 border-black rounded-xl p-2">
+              <p>Step 2</p>
+              <p>Buy Polygon</p>
+              <p>Buy Polygon from exchange or trusted wallet</p>
+            </div>
+            <div className="w-1/3 border-2 border-black rounded-xl p-2">
+              <p>Step 3</p>
+              <p>Buy Pepe Pigs</p>
+              <p>Use Polygon to purchase Pepe Pigs</p>
+            </div>
+          </div>
+        </section>
 
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore starter templates for Next.js.
-          </p>
-        </a>
+        <section>
+          <h1 className="ml-3 text-2xl">About</h1>
+          <div className="border-2 border-black rounded-xl p-2">
+            <p>Learn</p>
+            <p>How to Buy Pepe Pig NFT</p>
+            <p>Pepe Pigs Token</p>
+            <p>Polygon</p>
+            <p>Airdrops</p>
+            <p>Community</p>
+            <p>Contact</p>
+            <p>Wallets</p>
+            <p>Exchanges</p>
+          </div>
+        </section>
 
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50 text-balance`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
+        <section>
+          <div>
+            <h1 className="ml-3 text-2xl">Road Map</h1>
+            <div className="flex w-full gap-2">
+              <div className="w-1/2 border-2 border-black rounded-xl p-2">
+                <h1>Phase 1</h1>
+                <p>Community Building</p>
+                <p>NFT Collection</p>
+              </div>
+              <motion.div 
+                className="w-1/2"
+                initial={{ opacity: 0}}
+                whileInView={{ opacity: 1}}
+              >
+                <Image className="w-full rounded-xl" src="/pepepig2.png" alt="pepe pig" width={200} height={200} />
+              </motion.div>
+            </div>
+
+            <div className="flex w-full gap-2 mt-2">
+              <div className="w-1/2 border-2 border-black rounded-xl p-2 order-2">
+                <h1>Phase 2</h1>
+                <p>Token Drop</p>
+              </div>
+              <motion.div 
+                className="w-1/2 order-1"
+                initial={{ opacity: 0}}
+                whileInView={{ opacity: 1}}
+              >
+                <Image className="w-full rounded-xl" src="/pepepig4.png" alt="pepe pig" width={200} height={200} />
+              </motion.div>
+            </div>
+
+            <div className="flex w-full gap-2 mt-2">
+              <div className="w-1/2 border-2 border-black rounded-xl p-2">
+                <h1>Phase 3</h1>
+                <p>DAO</p>
+                <p>Staking</p>
+              </div>
+              <motion.div 
+                className="w-1/2"
+                initial={{ opacity: 0}}
+                whileInView={{ opacity: 1}}
+              >
+                <Image className="w-full rounded-xl" src="/pepepig5.png" alt="pepe pig" width={200} height={200} />
+              </motion.div>
+            </div>
+
+            <div className="flex w-full gap-2 mt-2">
+              <div className="w-1/2 order-2 border-2 border-black rounded-xl p-2">
+                <h1>Phase 4</h1>
+                <p>Game</p>
+              </div>
+              <motion.div 
+                className="w-1/2  order-1"
+                initial={{ opacity: 0}}
+                whileInView={{ opacity: 1}}
+              >
+                <Image className="w-full rounded-xl" src="/pepepig7.png" alt="pepe pig" width={200} height={200} />
+              </motion.div>
+            </div>
+          </div>
+
+        </section>
+        
       </div>
     </main>
   );
